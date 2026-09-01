@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en-ZA">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Checkout | RIM STUDIO Sandton</title>
+<meta name="description" content="Checkout at RIM STUDIO Sandton." />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="author" content="RIM STUDIO Sandton" />
+<meta name="geo.region" content="ZA-GP" />
+<meta name="geo.placename" content="Sandton, Johannesburg" />
+<meta name="geo.position" content="-26.0742;28.0607" />
+<meta name="ICBM" content="-26.0742, 28.0607" />
+<link rel="canonical" href="https://rimstudio.co.za/checkout.html" />
+
+<meta property="og:locale" content="en_ZA" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="RIM STUDIO Sandton" />
+<meta property="og:title" content="Checkout | RIM STUDIO" />
+<meta property="og:description" content="Checkout at RIM STUDIO Sandton." />
+<meta property="og:url" content="https://rimstudio.co.za/checkout.html" />
+<meta property="og:image" content="https://rimstudio.co.za/images/shop.jpg" />
+<meta property="og:image:alt" content="RIM STUDIO premium wheel showroom Sandton" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Checkout | RIM STUDIO" />
+<meta name="twitter:description" content="Checkout at RIM STUDIO Sandton." />
+<meta name="twitter:image" content="https://rimstudio.co.za/images/shop.jpg" />
+
+<link rel="icon" href="images/logo.png" type="image/png" />
+<link rel="apple-touch-icon" href="images/logo.png" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/style.css" />
+
+
+</head>
+<body data-page="">
+
+<div id="site-header"></div>
+
+<main>
+  <section class="page-header" style="padding-bottom:50px;">
+    <div class="wrap">
+      <span class="section-label">Checkout</span>
+      <h1 class="h1" style="font-size:clamp(2.2rem,5vw,3.4rem);">Checkout</h1>
+      <p class="body-muted" style="margin-top:10px;">This is a checkout skeleton — orders are currently confirmed directly with our team via WhatsApp or email before payment. Card/EFT payment can be wired in here later.</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="wrap two-col" style="align-items:flex-start;">
+
+      <div>
+        <h3 class="h3" style="margin-bottom:20px;">Your details</h3>
+        <form id="checkoutForm">
+          <div class="field">
+            <label for="cName">Full name</label>
+            <input type="text" id="cName" required />
+          </div>
+          <div class="field">
+            <label for="cEmail">Email address</label>
+            <input type="email" id="cEmail" required />
+          </div>
+          <div class="field">
+            <label for="cPhone">Phone number</label>
+            <input type="tel" id="cPhone" required />
+          </div>
+          <div class="field">
+            <label for="cMethod">Collection or delivery</label>
+            <select id="cMethod">
+              <option value="Collect from Sandton showroom">Collect from Sandton showroom</option>
+              <option value="Delivery — Johannesburg area">Delivery — Johannesburg area</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="cNotes">Notes (optional)</label>
+            <textarea id="cNotes" placeholder="Vehicle details, timing, or anything else we should know"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Review Order</button>
+        </form>
+
+        <div id="confirmBlock" style="display:none; margin-top:34px;">
+          <div class="form-success show" style="margin-top:0; margin-bottom:20px;">
+            Order details ready — send them to RIM STUDIO to confirm stock, fitment and final pricing.
+          </div>
+          <div style="display:flex; gap:14px; flex-wrap:wrap;">
+            <a href="#" id="sendWhatsapp" target="_blank" rel="noopener" class="btn btn-whatsapp">Send Order via WhatsApp</a>
+            <a href="#" id="sendEmail" class="btn btn-outline">Send Order via Email</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3 class="h3" style="margin-bottom:18px;">Order summary</h3>
+        <div id="checkoutLines"></div>
+        <div class="summary-row total" style="margin-top:6px;"><span>Estimated Total</span><span id="checkoutTotal">R 0</span></div>
+        <p class="form-note">Final pricing and fitment costs are confirmed by our team before any payment is taken.</p>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<div id="site-footer"></div>
+<div id="site-whatsapp"></div>
+
+<script src="js/products.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/render.js"></script>
+<script src="js/components.js"></script>
+<script src="js/main.js"></script>
+<script>
+  function renderCheckoutSummary() {
+    const lines = getCartLines();
+    const el = document.getElementById("checkoutLines");
+    if (!lines.length) {
+      el.innerHTML = `<p class="body-muted">Your cart is empty. <a class="utility-link" href="mags.html">Browse mags</a>.</p>`;
+      document.getElementById("checkoutForm").style.pointerEvents = "none";
+      document.getElementById("checkoutForm").style.opacity = "0.5";
+    } else {
+      el.innerHTML = lines
+        .map(
+          (l) => `<div class="summary-row"><span>${l.product.name} × ${l.qty}</span><span>${formatZAR(l.lineTotal)}</span></div>`
+        )
+        .join("");
+    }
+    document.getElementById("checkoutTotal").textContent = formatZAR(getCartSubtotal());
+  }
+
+  function buildOrderText() {
+    const lines = getCartLines();
+    const name = document.getElementById("cName").value;
+    const phone = document.getElementById("cPhone").value;
+    const method = document.getElementById("cMethod").value;
+    const notes = document.getElementById("cNotes").value;
+
+    let text = `New order request from ${name} (${phone})\nMethod: ${method}\n\nItems:\n`;
+    lines.forEach((l) => {
+      text += `- ${l.product.name} × ${l.qty} — ${formatZAR(l.lineTotal)}\n`;
+    });
+    text += `\nEstimated Total: ${formatZAR(getCartSubtotal())}`;
+    if (notes) text += `\n\nNotes: ${notes}`;
+    return text;
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    renderCheckoutSummary();
+
+    document.getElementById("checkoutForm").addEventListener("submit", (e) => {
+      e.preventDefault();
+      const orderText = buildOrderText();
+      document.getElementById("confirmBlock").style.display = "block";
+      document.getElementById("sendWhatsapp").href = waLink(orderText);
+
+      const email = document.getElementById("cEmail").value;
+      const subject = encodeURIComponent("New order request — RIM STUDIO website");
+      const body = encodeURIComponent(orderText + `\n\nCustomer email: ${email}`);
+      document.getElementById("sendEmail").href = `mailto:info@rimstudio.co.za?subject=${subject}&body=${body}`;
+
+      document.getElementById("confirmBlock").scrollIntoView({ behavior: "smooth", block: "nearest" });
+    });
+  });
+</script>
+</body>
+</html>

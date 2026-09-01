@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Disallow cart/checkout from indexing (thin/transactional)
+Disallow: /cart.html
+Disallow: /checkout.html
+
+Sitemap: https://rimstudio.co.za/sitemap.xml
+Sitemap: https://keegzm777-png.github.io/Rim-Studio/sitemap.xml
