@@ -176,8 +176,133 @@ const PRODUCTS = [
     description: "275/45 R21 Fullrun tyres on special offer. Quality option for this size.",
     tag: "SALE",
     image: "images/products/twc-11219.jpg"
+  },
+  {
+    id: "nk-ar1-275-35-r19",
+    name: "Nankang AR-1 Semi Slick – 275/35R19",
+    category: "nankang",
+    price: 5449,
+    size: "275/35R19",
+    finish: "Road Legal Semi-Slick",
+    brandFit: "Track days, club racing, time attack, performance road",
+    description: "Nankang AR-1 road-legal semi-slick motorsport tyre. Track-proven dry grip and precision steering response.",
+    image: "images/nankang/ar1-275-35r19.jpg", featured: true
+  },
+  {
+    id: "nk-ar1-235-35-r19",
+    name: "Nankang AR-1 Semi Slick – 235/35R19",
+    category: "nankang",
+    price: 4599,
+    size: "235/35R19",
+    finish: "Road Legal Semi-Slick",
+    brandFit: "Track days, club racing, time attack, performance road",
+    description: "Nankang AR-1 road-legal semi-slick motorsport tyre. Track-proven dry grip and precision steering response.",
+    image: "images/nankang/ar1-235-35r19.jpg", featured: true
+  },
+  {
+    id: "nk-ar1-265-35-r18",
+    name: "Nankang AR-1 Semi Slick – 265/35R18",
+    category: "nankang",
+    price: 4499,
+    size: "265/35R18",
+    finish: "Road Legal Semi-Slick",
+    brandFit: "Track days, club racing, time attack, performance road",
+    description: "Nankang AR-1 road-legal semi-slick motorsport tyre. Track-proven dry grip and precision steering response.",
+    image: "images/nankang/ar1-265-35r18.jpg"
+  },
+  {
+    id: "nk-ar1-245-40-r18",
+    name: "Nankang AR-1 Semi Slick – 245/40R18",
+    category: "nankang",
+    price: 4399,
+    size: "245/40R18",
+    finish: "Road Legal Semi-Slick",
+    brandFit: "Track days, club racing, time attack, performance road",
+    description: "Nankang AR-1 road-legal semi-slick motorsport tyre. Track-proven dry grip and precision steering response.",
+    image: "images/nankang/ar1-245-40r18.jpg"
+  },
+  {
+    id: "nk-ar1-235-40-r18",
+    name: "Nankang AR-1 Semi Slick – 235/40R18",
+    category: "nankang",
+    price: 4199,
+    size: "235/40R18",
+    finish: "Road Legal Semi-Slick",
+    brandFit: "Track days, club racing, time attack, performance road",
+    description: "Nankang AR-1 road-legal semi-slick motorsport tyre. Track-proven dry grip and precision steering response.",
+    image: "images/nankang/ar1-235-40r18.jpg"
+  },
+  {
+    id: "nk-ar1-235-45-r17",
+    name: "Nankang AR-1 Semi Slick – 235/45R17",
+    category: "nankang",
+    price: 4049,
+    size: "235/45R17",
+    finish: "Road Legal Semi-Slick",
+    brandFit: "Track days, club racing, time attack, performance road",
+    description: "Nankang AR-1 road-legal semi-slick motorsport tyre. Track-proven dry grip and precision steering response.",
+    image: "images/nankang/ar1-235-45r17.jpg"
+  },
+  {
+    id: "nk-ar1-225-45-r17",
+    name: "Nankang AR-1 Semi Slick – 225/45R17",
+    category: "nankang",
+    price: 3899,
+    size: "225/45R17",
+    finish: "Road Legal Semi-Slick",
+    brandFit: "Track days, club racing, time attack, performance road",
+    description: "Nankang AR-1 road-legal semi-slick motorsport tyre. Track-proven dry grip and precision steering response.",
+    image: "images/nankang/ar1-225-45r17.jpg"
+  },
+  {
+    id: "nk-ar1-225-45-r15",
+    name: "Nankang AR-1 Semi Slick – 225/45R15",
+    category: "nankang",
+    price: 3849,
+    size: "225/45R15",
+    finish: "Road Legal Semi-Slick",
+    brandFit: "Track days, club racing, time attack, performance road",
+    description: "Nankang AR-1 road-legal semi-slick motorsport tyre. Track-proven dry grip and precision steering response.",
+    image: "images/nankang/ar1-225-45r15.jpg"
+  },
+  {
+    id: "nk-ar1-205-50-r15",
+    name: "Nankang AR-1 Semi Slick – 205/50R15",
+    category: "nankang",
+    price: 3299,
+    size: "205/50R15",
+    finish: "Road Legal Semi-Slick",
+    brandFit: "Track days, club racing, time attack, performance road",
+    description: "Nankang AR-1 road-legal semi-slick motorsport tyre. Track-proven dry grip and precision steering response.",
+    image: "images/nankang/ar1-205-50r15.jpg"
+  },
+  {
+    id: "nk-ar1-195-50-r15",
+    name: "Nankang AR-1 Semi Slick – 195/50R15",
+    category: "nankang",
+    price: 2649,
+    size: "195/50R15",
+    finish: "Road Legal Semi-Slick",
+    brandFit: "Track days, club racing, time attack, performance road",
+    description: "Nankang AR-1 road-legal semi-slick motorsport tyre. Track-proven dry grip and precision steering response.",
+    image: "images/nankang/ar1-195-50r15.jpg"
+  },
+  {
+    id: "nk-ar1-205-60-r13",
+    name: "Nankang AR-1 Semi Slick – 205/60R13",
+    category: "nankang",
+    price: 2899, wasPrice: 3150,
+    size: "205/60R13",
+    finish: "Road Legal Semi-Slick",
+    brandFit: "Track days, club racing, time attack, performance road",
+    description: "Nankang AR-1 road-legal semi-slick motorsport tyre. Track-proven dry grip and precision steering response.",
+    image: "images/nankang/ar1-205-60r13.jpg", tag: "SALE"
   }
 ];
+
+
+
+
 
 function formatZAR(n) {
   return new Intl.NumberFormat("en-ZA", {
@@ -195,6 +320,7 @@ function getProductById(id) {
 function getProductsByCategory(cat) {
   if (cat === "mags") return PRODUCTS.filter(function (p) { return p.category === "mags"; });
   if (cat === "tyres") return PRODUCTS.filter(function (p) { return p.category === "tyres"; });
+  if (cat === "nankang") return PRODUCTS.filter(function (p) { return p.category === "nankang"; });
   return PRODUCTS.slice();
 }
 

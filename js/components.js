@@ -5,6 +5,8 @@
 
 var WHATSAPP_NUMBER = "27000000000"; // TODO: replace with real number e.g. 27829723207
 
+var FACEBOOK_URL = "https://www.facebook.com/share/14sgt9V3BjC/";
+
 function waLink(message) {
   var text = encodeURIComponent(
     message || "Hi RIM STUDIO, I'd like some information about your wheels/tyres."
@@ -17,6 +19,23 @@ function headerHTML(activePage) {
     return activePage === page ? "active" : "";
   }
   return (
+    '<div class="announcement-bar" aria-hidden="true">' +
+    '<div class="announcement-track">' +
+    '<span class="announcement-item">Free quotations on all products</span>' +
+    '<span class="announcement-item">Premium alloy wheels & mags</span>' +
+    '<span class="announcement-item">Tyre fitment & wheel balancing</span>' +
+    '<span class="announcement-item">Paint Protection Film (PPF)</span>' +
+    '<span class="announcement-item">Vehicle detailing & training</span>' +
+    '<span class="announcement-item">Rivonia · Johannesburg</span>' +
+    '<span class="announcement-item">Performance tyres & racing sets</span>' +
+    '<span class="announcement-item">Free quotations on all products</span>' +
+    '<span class="announcement-item">Premium alloy wheels & mags</span>' +
+    '<span class="announcement-item">Tyre fitment & wheel balancing</span>' +
+    '<span class="announcement-item">Paint Protection Film (PPF)</span>' +
+    '<span class="announcement-item">Vehicle detailing & training</span>' +
+    '<span class="announcement-item">Rivonia · Johannesburg</span>' +
+    '<span class="announcement-item">Performance tyres & racing sets</span>' +
+    '</div></div>' +
     '<header class="site-header">' +
     '<div class="wrap">' +
     '<a href="index.html" class="logo"><img src="images/logo.png" alt="RIM STUDIO Sandton – alloy wheels, mags and tyres Johannesburg" height="36" /></a>' +
@@ -25,6 +44,7 @@ function headerHTML(activePage) {
     '<a href="about.html" class="' + navClass("about") + '">ABOUT US</a>' +
     '<a href="mags.html" class="' + navClass("mags") + '">MAGS</a>' +
     '<a href="tyres.html" class="' + navClass("tyres") + '">TYRES</a>' +
+    '<a href="nankang.html" class="' + navClass("nankang") + '">NANKANG</a>' +
     '<a href="detailing.html" class="' + navClass("detailing") + '">DETAILING</a>' +
     '<a href="contact.html" class="' + navClass("contact") + '">CONTACT US</a>' +
     "</nav>" +
@@ -33,6 +53,7 @@ function headerHTML(activePage) {
     '<svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 6h15l-1.5 9h-12z"/><circle cx="9" cy="20" r="1"/><circle cx="18" cy="20" r="1"/><path d="M6 6L5 2H2"/></svg>' +
     '<span class="cart-count" data-cart-count>0</span>' +
     "</a>" +
+    '<a href="' + FACEBOOK_URL + '" class="nav-social" target="_blank" rel="noopener noreferrer" aria-label="Facebook">' +'<svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.513c-1.491 0-1.956.931-1.956 1.887v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg>' +'</a>' +
     '<a href="' + waLink() + '" class="nav-wa" target="_blank" rel="noopener">WhatsApp</a>' +
     '<button class="menu-toggle" id="menuToggle" aria-label="Menu">' +
     '<svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg>' +
@@ -44,6 +65,7 @@ function headerHTML(activePage) {
     '<a href="about.html">ABOUT US</a>' +
     '<a href="mags.html">MAGS</a>' +
     '<a href="tyres.html">TYRES</a>' +
+    '<a href="nankang.html">NANKANG</a>' +
     '<a href="detailing.html">DETAILING</a>' +
     '<a href="contact.html">CONTACT US</a>' +
     '<a href="' + waLink() + '" class="wa-mobile" target="_blank" rel="noopener">WhatsApp Us</a>' +
@@ -63,7 +85,7 @@ function footerHTML() {
     "</div>" +
     "<div>" +
     "<h4>Visit Us</h4>" +
-    "<address>183 Rivonia Rd<br/>Morningside<br/>Sandton, 2057<br/>South Africa</address>" +
+    "<address>33 7th Road<br/>Rivonia<br/>Johannesburg, Gauteng<br/>South Africa</address>" +
     '<p style="margin-top:10px;"><a href="mailto:info@rimstudio.co.za" style="color:var(--cyan)">info@rimstudio.co.za</a></p>' +
     "</div>" +
     "<div>" +
@@ -71,6 +93,7 @@ function footerHTML() {
     "<ul>" +
     '<li><a href="mags.html">Mags</a></li>' +
     '<li><a href="tyres.html">Tyres</a></li>' +
+    '<li><a href="nankang.html">Nankang</a></li>' +
     '<li><a href="detailing.html">Detailing</a></li>' +
     '<li><a href="about.html">About Us</a></li>' +
     '<li><a href="contact.html">Contact Us</a></li>' +
@@ -84,6 +107,9 @@ function footerHTML() {
     '<li><a href="returns.html">Returns Policy</a></li>' +
     "</ul>" +
     '<a href="' + waLink() + '" class="btn btn-whatsapp" style="margin-top:14px;display:inline-flex;" target="_blank" rel="noopener">WhatsApp Us</a>' +
+    '<div class="footer-social">' +
+    '<a href="' + FACEBOOK_URL + '" class="footer-social-link" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Facebook">' +'<svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.513c-1.491 0-1.956.931-1.956 1.887v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg> Facebook' +'</a>' +
+    '</div>' +
     "</div>" +
     "</div>" +
     '<div class="footer-bottom">&copy; ' +

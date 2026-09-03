@@ -6,13 +6,14 @@ function productImageMarkup(product) {
   if (product.image) {
     return '<img src="' + product.image + '" alt="' + product.name.replace(/"/g, "&quot;") + '" loading="lazy" />';
   }
+  var label = product.size || product.category || "Tyre";
   return (
-    '<div class="product-placeholder">' +
-    '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">' +
+    '<div class="product-placeholder" style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;min-height:200px;background:linear-gradient(160deg,#0c0c0c,#141414);">' +
+    '<svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="currentColor" stroke-width="1.5" style="opacity:0.5">' +
     '<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/>' +
-    '<path d="M12 3v2M12 19v2M3 12h2M19 12h2M5.6 5.6l1.4 1.4M17 17l1.4 1.4M5.6 18.4l1.4-1.4M17 7l1.4-1.4"/>' +
     "</svg>" +
-    "<span>Product photo coming soon</span>" +
+    '<span style="color:var(--cyan);font-weight:700;letter-spacing:0.04em;">' + label + "</span>" +
+    '<span style="font-size:0.75rem;color:var(--text-muted);">Nankang AR-1</span>' +
     "</div>"
   );
 }
