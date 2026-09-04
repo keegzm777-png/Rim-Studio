@@ -3,7 +3,7 @@
  * Update WHATSAPP_NUMBER when the real number is provided.
  */
 
-var WHATSAPP_NUMBER = "27000000000"; // TODO: replace with real number e.g. 27829723207
+var WHATSAPP_NUMBER = "27837813889"; // 083 781 3889
 
 var FACEBOOK_URL = "https://www.facebook.com/share/14sgt9V3BjC/";
 
