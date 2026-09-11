@@ -2432,3 +2432,10 @@ a.product-card .badge {
   height: 100%;
   min-height: 0;
 }
+
+/* Brand product background fallback */
+.product-media {
+  background-image: url("../images/brand/product-bg.png");
+  background-size: cover;
+  background-position: center;
+}
