@@ -893,7 +893,11 @@ input, textarea, select {
   background: rgba(24, 119, 242, 0.08);
 }
 .footer-social {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
   margin-top: 14px;
+  align-items: center;
 }
 .footer-social-link {
   display: inline-flex;
