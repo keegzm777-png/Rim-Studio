@@ -127,9 +127,9 @@
     <div class="wrap">
       <div class="section-head">
         <div>
-          <span class="section-label">Catalogue</span>
-          <h2 class="h2" style="margin-top:0.5rem;">Performance &amp; fitment tyres</h2>
-          <p class="body-muted" style="margin-top:0.5rem;max-width:540px;">Road, performance and fitment options. Free quotations — confirm stock on WhatsApp or in-showroom.</p>
+          <span class="section-label">Our stock</span>
+          <h2 class="h2" style="margin-top:0.5rem;">Tyres in stock</h2>
+          <p class="body-muted" style="margin-top:0.5rem;max-width:560px;">Performance, road and Nankang AR-1 road-legal semi-slick tyres — one catalogue, free quotations.</p>
         </div>
       </div>
       <div id="filterBar" class="filter-bar" style="margin-bottom:1.5rem;"></div>
@@ -137,22 +137,7 @@
     </div>
   </section>
 
-  <section class="section" id="nankang-ar1">
-    <div class="wrap">
-      <div class="section-head">
-        <div>
-          <span class="section-label">Nankang Motorsport</span>
-          <h2 class="h2" style="margin-top:0.5rem;">Road-legal semi-slick sizes</h2>
-          <p class="body-muted" style="margin-top:0.5rem;max-width:560px;">Nankang AR-1 semi-slick tyres for track days, time attack and high-performance road cars. Same range as our Nankang page — available with professional fitment at RIM STUDIO.</p>
-        </div>
-        <a href="nankang.html" class="btn btn-outline" style="align-self:flex-start;">Full Nankang range</a>
-      </div>
-      <div class="product-grid" id="nankangOnTyresGrid"></div>
-      <p class="form-note" style="margin-top:1.25rem;">Prices shown per tyre. Stock and final pricing confirmed on WhatsApp or in-showroom. Free quotation on every size.</p>
-    </div>
-  </section>
-
-  <section class="cta-banner">
+<section class="cta-banner">
 
     <div class="wrap">
       <span class="section-label">Need A Size Not Listed?</span>
@@ -177,10 +162,16 @@
 <script>
   let activeSize = "all";
 
+  function allTyreStock() {
+    var road = typeof getProductsByCategory === "function" ? getProductsByCategory("tyres") : [];
+    var nk = typeof getProductsByCategory === "function" ? getProductsByCategory("nankang") : [];
+    return road.concat(nk);
+  }
+
   function renderTyreFilters() {
-    const tyres = getProductsByCategory("tyres");
-    const sizes = ["all"].concat(Array.from(new Set(tyres.map(function (t) { return t.size; }))));
-    const bar = document.getElementById("filterBar");
+    var tyres = allTyreStock();
+    var sizes = ["all"].concat(Array.from(new Set(tyres.map(function (t) { return t.size; }).filter(Boolean))));
+    var bar = document.getElementById("filterBar");
     if (!bar) return;
     bar.innerHTML = sizes
       .map(function (s) {
@@ -197,7 +188,7 @@
   }
 
   function applyTyreFilter() {
-    var tyres = getProductsByCategory("tyres");
+    var tyres = allTyreStock();
     if (activeSize !== "all") {
       tyres = tyres.filter(function (t) { return t.size === activeSize; });
     }
@@ -207,9 +198,6 @@
   document.addEventListener("DOMContentLoaded", function () {
     renderTyreFilters();
     applyTyreFilter();
-    if (typeof getProductsByCategory === "function" && typeof renderProductGrid === "function") {
-      renderProductGrid("nankangOnTyresGrid", getProductsByCategory("nankang"));
-    }
     var ctaWa = document.getElementById("ctaWhatsapp");
     if (ctaWa) ctaWa.href = waLink("Hi RIM STUDIO, I'd like to check tyre sizes and pricing.");
   });

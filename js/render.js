@@ -25,26 +25,25 @@ function productCardHTML(product) {
   var was = product.wasPrice
     ? '<span class="price-was">' + formatZAR(product.wasPrice) + "</span>"
     : "";
+  var meta = product.size || product.brandFit || product.finish || "";
   return (
     '<a href="product.html?id=' +
     product.id +
-    '" class="product-card">' +
+    '" class="product-card product-card--gallery">' +
     '<div class="product-media">' +
     badge +
     productImageMarkup(product) +
-    "</div>" +
-    '<div class="product-body">' +
+    '<div class="product-caption">' +
     "<h3>" +
     product.name +
     "</h3>" +
-    '<p class="product-meta">' +
-    (product.brandFit || product.size || "") +
-    "</p>" +
+    (meta ? '<p class="product-meta">' + meta + "</p>" : "") +
     '<div class="price-row">' +
     '<span class="price">' +
     formatZAR(product.price) +
     "</span>" +
     was +
+    "</div>" +
     "</div>" +
     "</div>" +
     "</a>"
