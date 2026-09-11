@@ -119,19 +119,41 @@
     <div class="wrap">
       <span class="section-label">Tyres</span>
       <h1 class="h1" style="font-size:clamp(2.4rem,5vw,4rem);">Tyres, fitted properly.</h1>
-      <p class="body-lg">Tyres available on their own or as part of a complete wheel-and-tyre package — filter by size below.</p>
+      <p class="body-lg">Performance, road and Nankang AR-1 road-legal semi-slick tyres — fitted and balanced in Rivonia. Free quotations.</p>
     </div>
   </section>
 
   <section class="section-tight">
     <div class="wrap">
-      <div class="filter-bar" id="filterBar"></div>
+      <div class="section-head">
+        <div>
+          <span class="section-label">Catalogue</span>
+          <h2 class="h2" style="margin-top:0.5rem;">Performance &amp; fitment tyres</h2>
+          <p class="body-muted" style="margin-top:0.5rem;max-width:540px;">Road, performance and fitment options. Free quotations — confirm stock on WhatsApp or in-showroom.</p>
+        </div>
+      </div>
+      <div id="filterBar" class="filter-bar" style="margin-bottom:1.5rem;"></div>
       <div class="product-grid" id="tyresGrid"></div>
-      <p class="body-muted" style="margin-top:34px;">Looking for tyres already paired with wheels? Several of our <a href="mags.html" class="utility-link">mag packages</a> are supplied complete with tyres fitted.</p>
+    </div>
+  </section>
+
+  <section class="section" id="nankang-ar1">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <span class="section-label">Nankang Motorsport</span>
+          <h2 class="h2" style="margin-top:0.5rem;">Road-legal semi-slick sizes</h2>
+          <p class="body-muted" style="margin-top:0.5rem;max-width:560px;">Nankang AR-1 semi-slick tyres for track days, time attack and high-performance road cars. Same range as our Nankang page — available with professional fitment at RIM STUDIO.</p>
+        </div>
+        <a href="nankang.html" class="btn btn-outline" style="align-self:flex-start;">Full Nankang range</a>
+      </div>
+      <div class="product-grid" id="nankangOnTyresGrid"></div>
+      <p class="form-note" style="margin-top:1.25rem;">Prices shown per tyre. Stock and final pricing confirmed on WhatsApp or in-showroom. Free quotation on every size.</p>
     </div>
   </section>
 
   <section class="cta-banner">
+
     <div class="wrap">
       <span class="section-label">Need A Size Not Listed?</span>
       <h2 class="h2" style="margin-top:14px;">Ask us on WhatsApp.</h2>
@@ -157,17 +179,17 @@
 
   function renderTyreFilters() {
     const tyres = getProductsByCategory("tyres");
-    const sizes = ["all", ...new Set(tyres.map((t) => t.size))];
+    const sizes = ["all"].concat(Array.from(new Set(tyres.map(function (t) { return t.size; }))));
     const bar = document.getElementById("filterBar");
+    if (!bar) return;
     bar.innerHTML = sizes
-      .map(
-        (s) =>
-          `<button class="filter-chip ${s === activeSize ? "active" : ""}" data-key="${s}">${s === "all" ? "All Sizes" : s}</button>`
-      )
+      .map(function (s) {
+        return '<button type="button" class="filter-chip' + (s === activeSize ? " active" : "") + '" data-key="' + s + '">' + (s === "all" ? "All Sizes" : s) + "</button>";
+      })
       .join("");
-    bar.querySelectorAll(".filter-chip").forEach((btn) => {
-      btn.addEventListener("click", () => {
-        activeSize = btn.dataset.key;
+    bar.querySelectorAll(".filter-chip").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        activeSize = btn.getAttribute("data-key");
         renderTyreFilters();
         applyTyreFilter();
       });
@@ -175,15 +197,20 @@
   }
 
   function applyTyreFilter() {
-    let tyres = getProductsByCategory("tyres");
-    if (activeSize !== "all") tyres = tyres.filter((t) => t.size === activeSize);
+    var tyres = getProductsByCategory("tyres");
+    if (activeSize !== "all") {
+      tyres = tyres.filter(function (t) { return t.size === activeSize; });
+    }
     renderProductGrid("tyresGrid", tyres);
   }
 
-  document.addEventListener("DOMContentLoaded", () => {
+  document.addEventListener("DOMContentLoaded", function () {
     renderTyreFilters();
     applyTyreFilter();
-    const ctaWa = document.getElementById("ctaWhatsapp");
+    if (typeof getProductsByCategory === "function" && typeof renderProductGrid === "function") {
+      renderProductGrid("nankangOnTyresGrid", getProductsByCategory("nankang"));
+    }
+    var ctaWa = document.getElementById("ctaWhatsapp");
     if (ctaWa) ctaWa.href = waLink("Hi RIM STUDIO, I'd like to check tyre sizes and pricing.");
   });
 </script>
