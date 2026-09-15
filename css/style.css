@@ -8,13 +8,13 @@
   --bg-elevated: #0a0a0a;
   --bg-card: #0f0f0f;
   --border: rgba(255, 255, 255, 0.08);
-  --border-hover: rgba(0, 255, 85, 0.35);
+  --border-hover: rgba(0, 168, 120, 0.35);
   --text: #f5f5f5;
   --text-muted: rgba(255, 255, 255, 0.55);
   --text-dim: rgba(255, 255, 255, 0.38);
-  --cyan: #00ff55;
-  --cyan-dim: #00cc44;
-  --cyan-glow: rgba(0, 255, 85, 0.28);
+  --cyan: #00A878;
+  --cyan-dim: #008F66;
+  --cyan-glow: rgba(0, 168, 120, 0.28);
   --green: #25d366;
   --green-hover: #2fe374;
   --radius: 10px;
@@ -124,7 +124,7 @@ input, textarea, select {
   text-decoration: underline;
   text-underline-offset: 3px;
 }
-.utility-link:hover { color: #33ff77; }
+.utility-link:hover { color: #00C48A; }
 
 /* ---------- HEADER ---------- */
 .site-header {
@@ -206,14 +206,14 @@ input, textarea, select {
   align-items: center;
   gap: 0.35rem;
   padding: 0.4rem 0.9rem;
-  border: 1px solid rgba(0,255,85,0.4);
+  border: 1px solid rgba(0,168,120,0.4);
   border-radius: var(--radius-full);
   font-size: 0.72rem;
   font-weight: 500;
   color: var(--cyan);
   transition: background 0.2s;
 }
-.nav-wa:hover { background: rgba(0,255,85,0.1); }
+.nav-wa:hover { background: rgba(0,168,120,0.1); }
 @media (min-width: 640px) { .nav-wa { display: flex; } }
 
 .menu-toggle {
@@ -273,16 +273,16 @@ input, textarea, select {
   color: #000;
 }
 .btn-primary:hover {
-  background: #33ff77;
+  background: #00C48A;
   box-shadow: 0 0 22px var(--cyan-glow);
 }
 .btn-outline {
-  border-color: rgba(0,255,85,0.5);
+  border-color: rgba(0,168,120,0.5);
   color: var(--cyan);
   background: transparent;
 }
 .btn-outline:hover {
-  background: rgba(0,255,85,0.1);
+  background: rgba(0,168,120,0.1);
   border-color: var(--cyan);
 }
 .btn-ghost {
@@ -424,7 +424,7 @@ input, textarea, select {
 .product-card:hover {
   transform: translateY(-4px);
   border-color: var(--border-hover);
-  box-shadow: 0 12px 36px rgba(0, 255, 85, 0.07);
+  box-shadow: 0 12px 36px rgba(0, 168, 120, 0.07);
 }
 .product-media {
   aspect-ratio: 1;
@@ -523,7 +523,7 @@ input, textarea, select {
   transition: all 0.2s;
 }
 .filter-chip:hover {
-  border-color: rgba(0,255,85,0.4);
+  border-color: rgba(0,168,120,0.4);
   color: var(--cyan);
 }
 .filter-chip.active {
@@ -580,7 +580,7 @@ input, textarea, select {
   padding: 4.5rem 0;
   text-align: left;
   border-top: 1px solid var(--border);
-  background: linear-gradient(90deg, rgba(0,255,85,0.04), transparent 50%, rgba(0,255,85,0.03));
+  background: linear-gradient(90deg, rgba(0,168,120,0.04), transparent 50%, rgba(0,168,120,0.03));
 }
 .cta-actions {
   margin-top: 1.75rem;
@@ -631,8 +631,8 @@ input, textarea, select {
   display: none;
   margin-top: 1rem;
   padding: 0.9rem 1.1rem;
-  background: rgba(0,255,85,0.1);
-  border: 1px solid rgba(0,255,85,0.3);
+  background: rgba(0,168,120,0.1);
+  border: 1px solid rgba(0,168,120,0.3);
   border-radius: 8px;
   color: var(--cyan);
   font-size: 0.9rem;
@@ -869,7 +869,7 @@ input, textarea, select {
   font-size: 1.35rem;
 }
 .detail-tagline {
-  color: var(--cyan, #00ff55);
+  color: var(--cyan, #00A878);
   font-weight: 600;
   letter-spacing: 0.02em;
   margin-top: 1.5rem !important;
@@ -974,7 +974,7 @@ input, textarea, select {
   background: rgba(5, 5, 5, 0.88);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border-bottom-color: rgba(0, 255, 85, 0.12);
+  border-bottom-color: rgba(0, 168, 120, 0.12);
   box-shadow: 0 8px 32px rgba(0,0,0,0.45);
 }
 
@@ -994,7 +994,7 @@ input, textarea, select {
   inset: 0;
   background:
     linear-gradient(105deg, rgba(5,5,5,0.88) 0%, rgba(5,5,5,0.55) 45%, rgba(5,5,5,0.25) 100%),
-    radial-gradient(ellipse at 70% 40%, rgba(0,255,85,0.08), transparent 55%);
+    radial-gradient(ellipse at 70% 40%, rgba(0,168,120,0.08), transparent 55%);
   pointer-events: none;
   z-index: 0;
 }
@@ -1060,7 +1060,7 @@ input, textarea, select {
 .card:hover {
   transform: translateY(-6px);
   border-color: var(--border-hover);
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45), 0 0 0 1px rgba(0, 255, 85, 0.12);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45), 0 0 0 1px rgba(0, 168, 120, 0.12);
 }
 .product-card img,
 .product-image {
@@ -1139,7 +1139,7 @@ input, textarea, select {
   padding: 4.5rem 0 2.5rem;
   border-bottom: 1px solid var(--border);
   background:
-    radial-gradient(ellipse at 20% 0%, rgba(0,255,85,0.06), transparent 50%),
+    radial-gradient(ellipse at 20% 0%, rgba(0,168,120,0.06), transparent 50%),
     var(--bg);
 }
 .page-header .h1 {
@@ -1183,8 +1183,8 @@ input, textarea, select {
 }
 .product-card:hover {
   transform: translateY(-8px);
-  border-color: rgba(0, 255, 85, 0.35);
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.55), 0 0 0 1px rgba(0, 255, 85, 0.1);
+  border-color: rgba(0, 168, 120, 0.35);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.55), 0 0 0 1px rgba(0, 168, 120, 0.1);
 }
 .product-media {
   position: relative;
@@ -1292,7 +1292,7 @@ input, textarea, select {
   inset: 0;
   background:
     linear-gradient(105deg, rgba(5,5,5,0.92) 0%, rgba(5,5,5,0.7) 42%, rgba(5,5,5,0.35) 100%),
-    radial-gradient(ellipse at 75% 40%, rgba(0,255,85,0.1), transparent 50%);
+    radial-gradient(ellipse at 75% 40%, rgba(0,168,120,0.1), transparent 50%);
   pointer-events: none;
 }
 .nankang-hero .wrap {
@@ -1330,7 +1330,7 @@ input, textarea, select {
   transition: border-color 0.3s ease, transform 0.4s cubic-bezier(0.22,1,0.36,1), box-shadow 0.35s ease;
 }
 .range-card:hover {
-  border-color: rgba(0, 255, 85, 0.3);
+  border-color: rgba(0, 168, 120, 0.3);
   transform: translateY(-5px);
   box-shadow: 0 16px 40px rgba(0,0,0,0.4);
 }
@@ -1388,7 +1388,7 @@ input, textarea, select {
   text-align: center;
   transition: border-color 0.3s ease;
 }
-.stat-box:hover { border-color: rgba(0,255,85,0.25); }
+.stat-box:hover { border-color: rgba(0,168,120,0.25); }
 .stat-box strong {
   display: block;
   font-size: 1.4rem;
@@ -1408,7 +1408,7 @@ input, textarea, select {
 .cta-banner {
   padding: 4rem 0;
   background:
-    radial-gradient(ellipse at 50% 100%, rgba(0,255,85,0.08), transparent 55%),
+    radial-gradient(ellipse at 50% 100%, rgba(0,168,120,0.08), transparent 55%),
     linear-gradient(180deg, #080808, #050505);
   border-top: 1px solid var(--border);
   text-align: center;
@@ -1489,7 +1489,7 @@ input, textarea, select {
 body {
   background: #050505;
   background-image:
-    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(0,255,85,0.04), transparent);
+    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(0,168,120,0.04), transparent);
 }
 
 /* Header premium */
@@ -1501,7 +1501,7 @@ body {
 .site-header.is-scrolled {
   background: rgba(5, 5, 5, 0.94);
   box-shadow: 0 12px 40px rgba(0,0,0,0.5);
-  border-bottom-color: rgba(0,255,85,0.12);
+  border-bottom-color: rgba(0,168,120,0.12);
 }
 .nav-desktop a {
   position: relative;
@@ -1528,7 +1528,7 @@ body {
   display: none;
   padding: 0.45rem 0.9rem;
   border-radius: 999px;
-  border: 1px solid rgba(0,255,85,0.35);
+  border: 1px solid rgba(0,168,120,0.35);
   color: var(--cyan);
   font-size: 0.72rem;
   font-weight: 600;
@@ -1537,8 +1537,8 @@ body {
 }
 @media (min-width: 720px) { .nav-wa { display: inline-flex; } }
 .nav-wa:hover {
-  background: rgba(0,255,85,0.1);
-  box-shadow: 0 0 20px rgba(0,255,85,0.15);
+  background: rgba(0,168,120,0.1);
+  box-shadow: 0 0 20px rgba(0,168,120,0.15);
 }
 
 /* Hero site-wide */
@@ -1550,7 +1550,7 @@ body {
 }
 .hero-eyebrow,
 .section-label {
-  text-shadow: 0 0 24px rgba(0,255,85,0.25);
+  text-shadow: 0 0 24px rgba(0,168,120,0.25);
 }
 
 /* Category cards on homepage */
@@ -1579,14 +1579,14 @@ body {
   content: "";
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at 80% 20%, rgba(0,255,85,0.12), transparent 55%);
+  background: radial-gradient(circle at 80% 20%, rgba(0,168,120,0.12), transparent 55%);
   opacity: 0.8;
   transition: opacity 0.35s ease;
 }
 .category-card:hover {
   transform: translateY(-8px);
-  border-color: rgba(0,255,85,0.4);
-  box-shadow: 0 24px 50px rgba(0,0,0,0.5), 0 0 0 1px rgba(0,255,85,0.08);
+  border-color: rgba(0,168,120,0.4);
+  box-shadow: 0 24px 50px rgba(0,0,0,0.5), 0 0 0 1px rgba(0,168,120,0.08);
 }
 .category-card:hover::before { opacity: 1; }
 .category-card-content {
@@ -1646,7 +1646,7 @@ body {
 }
 .trust-item:hover,
 .feature-item:hover {
-  border-color: rgba(0,255,85,0.28);
+  border-color: rgba(0,168,120,0.28);
   transform: translateY(-3px);
 }
 .trust-item h3,
@@ -1745,14 +1745,14 @@ body {
 .filter-pill.active {
   border-color: var(--cyan);
   color: var(--cyan);
-  background: rgba(0,255,85,0.08);
+  background: rgba(0,168,120,0.08);
 }
 
 /* Page header site-wide */
 .page-header {
   padding: 4.75rem 0 2.75rem;
   background:
-    radial-gradient(ellipse at 15% -10%, rgba(0,255,85,0.07), transparent 45%),
+    radial-gradient(ellipse at 15% -10%, rgba(0,168,120,0.07), transparent 45%),
     linear-gradient(180deg, #080808, #050505);
   border-bottom: 1px solid var(--border);
 }
@@ -1780,8 +1780,8 @@ form select {
 form input:focus,
 form textarea:focus {
   outline: none;
-  border-color: rgba(0,255,85,0.45);
-  box-shadow: 0 0 0 3px rgba(0,255,85,0.1);
+  border-color: rgba(0,168,120,0.45);
+  box-shadow: 0 0 0 3px rgba(0,168,120,0.1);
 }
 form label {
   display: block;
@@ -1824,14 +1824,14 @@ iframe[title*="RIM STUDIO"] {
 /* Divider glow */
 .section-divider {
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(0,255,85,0.25), transparent);
+  background: linear-gradient(90deg, transparent, rgba(0,168,120,0.25), transparent);
   border: none;
   margin: 0;
 }
 
 /* Selection */
 ::selection {
-  background: rgba(0,255,85,0.3);
+  background: rgba(0,168,120,0.3);
   color: #fff;
 }
 
@@ -1866,7 +1866,7 @@ iframe[title*="RIM STUDIO"] {
 }
 .service-card:hover {
   transform: translateY(-6px);
-  border-color: rgba(0,255,85,0.35);
+  border-color: rgba(0,168,120,0.35);
   box-shadow: 0 18px 40px rgba(0,0,0,0.45);
 }
 .service-num {
@@ -1925,15 +1925,15 @@ iframe[title*="RIM STUDIO"] {
   box-shadow: 0 4px 24px rgba(0,0,0,0.25);
 }
 .product-card:hover {
-  border-color: rgba(0,255,85,0.4);
+  border-color: rgba(0,168,120,0.4);
   box-shadow:
     0 24px 56px rgba(0,0,0,0.55),
-    0 0 0 1px rgba(0,255,85,0.12),
-    0 0 40px rgba(0,255,85,0.06);
+    0 0 0 1px rgba(0,168,120,0.12),
+    0 0 40px rgba(0,168,120,0.06);
 }
 .product-media {
   background:
-    radial-gradient(circle at 50% 40%, rgba(0,255,85,0.04), transparent 60%),
+    radial-gradient(circle at 50% 40%, rgba(0,168,120,0.04), transparent 60%),
     #0a0a0a;
 }
 .product-body {
@@ -1950,7 +1950,7 @@ iframe[title*="RIM STUDIO"] {
   font-size: 1.1rem;
   font-weight: 700;
   letter-spacing: -0.03em;
-  background: linear-gradient(90deg, #fff 0%, rgba(0,255,85,0.9) 180%);
+  background: linear-gradient(90deg, #fff 0%, rgba(0,168,120,0.9) 180%);
   -webkit-background-clip: text;
   background-clip: text;
   color: #fff;
@@ -1978,7 +1978,7 @@ iframe[title*="RIM STUDIO"] {
   left: 0;
   right: 0;
   height: 2px;
-  background: linear-gradient(90deg, transparent, rgba(0,255,85,0.5), transparent);
+  background: linear-gradient(90deg, transparent, rgba(0,168,120,0.5), transparent);
   opacity: 0;
   transition: opacity 0.35s ease;
 }
@@ -1986,17 +1986,17 @@ iframe[title*="RIM STUDIO"] {
   content: "";
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at 90% 10%, rgba(0,255,85,0.08), transparent 45%);
+  background: radial-gradient(circle at 90% 10%, rgba(0,168,120,0.08), transparent 45%);
   opacity: 0;
   transition: opacity 0.35s ease;
   pointer-events: none;
 }
 .service-card:hover {
   transform: translateY(-8px);
-  border-color: rgba(0,255,85,0.35);
+  border-color: rgba(0,168,120,0.35);
   box-shadow:
     0 28px 56px rgba(0,0,0,0.5),
-    0 0 0 1px rgba(0,255,85,0.1);
+    0 0 0 1px rgba(0,168,120,0.1);
 }
 .service-card:hover::before,
 .service-card:hover::after {
@@ -2014,9 +2014,9 @@ iframe[title*="RIM STUDIO"] {
   font-weight: 700;
   letter-spacing: 0.14em;
   color: var(--cyan);
-  border: 1px solid rgba(0,255,85,0.25);
+  border: 1px solid rgba(0,168,120,0.25);
   border-radius: 6px;
-  background: rgba(0,255,85,0.06);
+  background: rgba(0,168,120,0.06);
 }
 .service-card h3 {
   font-size: 1.1rem;
@@ -2066,10 +2066,10 @@ iframe[title*="RIM STUDIO"] {
   box-shadow: 0 8px 32px rgba(0,0,0,0.28);
 }
 .category-card:hover {
-  border-color: rgba(0,255,85,0.4);
+  border-color: rgba(0,168,120,0.4);
   box-shadow:
     0 28px 56px rgba(0,0,0,0.5),
-    0 0 40px rgba(0,255,85,0.06);
+    0 0 40px rgba(0,168,120,0.06);
 }
 
 /* Generic card grid */
@@ -2093,7 +2093,7 @@ iframe[title*="RIM STUDIO"] {
 }
 .card:hover {
   transform: translateY(-4px);
-  border-color: rgba(0,255,85,0.28);
+  border-color: rgba(0,168,120,0.28);
   box-shadow: 0 16px 40px rgba(0,0,0,0.4);
 }
 
@@ -2104,10 +2104,10 @@ iframe[title*="RIM STUDIO"] {
   box-shadow: 0 6px 28px rgba(0,0,0,0.25);
 }
 .range-card:hover {
-  border-color: rgba(0,255,85,0.35);
+  border-color: rgba(0,168,120,0.35);
   box-shadow:
     0 20px 48px rgba(0,0,0,0.45),
-    0 0 0 1px rgba(0,255,85,0.08);
+    0 0 0 1px rgba(0,168,120,0.08);
 }
 
 /* Why cards */
@@ -2131,7 +2131,7 @@ iframe[title*="RIM STUDIO"] {
 }
 .why-card:hover {
   transform: translateY(-4px);
-  border-color: rgba(0,255,85,0.28);
+  border-color: rgba(0,168,120,0.28);
   box-shadow: 0 16px 40px rgba(0,0,0,0.4);
 }
 .why-card h4 {
@@ -2168,12 +2168,12 @@ iframe[title*="RIM STUDIO"] {
 /* Product cards */
 .product-card:hover {
   transform: translateY(-12px) scale(1.01);
-  border-color: rgba(0, 255, 85, 0.55) !important;
+  border-color: rgba(0, 168, 120, 0.55) !important;
   box-shadow:
     0 28px 60px rgba(0, 0, 0, 0.65),
-    0 0 0 1px rgba(0, 255, 85, 0.25),
-    0 0 48px rgba(0, 255, 85, 0.22),
-    0 0 80px rgba(0, 255, 85, 0.08) !important;
+    0 0 0 1px rgba(0, 168, 120, 0.25),
+    0 0 48px rgba(0, 168, 120, 0.22),
+    0 0 80px rgba(0, 168, 120, 0.08) !important;
 }
 .product-card:hover .product-media img,
 .product-card:hover img {
@@ -2183,21 +2183,21 @@ iframe[title*="RIM STUDIO"] {
 /* Service cards */
 .service-card:hover {
   transform: translateY(-12px) scale(1.015);
-  border-color: rgba(0, 255, 85, 0.5) !important;
+  border-color: rgba(0, 168, 120, 0.5) !important;
   box-shadow:
     0 32px 64px rgba(0, 0, 0, 0.6),
-    0 0 0 1px rgba(0, 255, 85, 0.22),
-    0 0 56px rgba(0, 255, 85, 0.2) !important;
+    0 0 0 1px rgba(0, 168, 120, 0.22),
+    0 0 56px rgba(0, 168, 120, 0.2) !important;
 }
 
 /* Category cards */
 .category-card:hover {
   transform: translateY(-12px) scale(1.015);
-  border-color: rgba(0, 255, 85, 0.5) !important;
+  border-color: rgba(0, 168, 120, 0.5) !important;
   box-shadow:
     0 32px 64px rgba(0, 0, 0, 0.6),
-    0 0 0 1px rgba(0, 255, 85, 0.22),
-    0 0 56px rgba(0, 255, 85, 0.18) !important;
+    0 0 0 1px rgba(0, 168, 120, 0.22),
+    0 0 56px rgba(0, 168, 120, 0.18) !important;
 }
 
 /* Range / generic / why */
@@ -2205,32 +2205,32 @@ iframe[title*="RIM STUDIO"] {
 .card:hover,
 .why-card:hover {
   transform: translateY(-10px);
-  border-color: rgba(0, 255, 85, 0.45) !important;
+  border-color: rgba(0, 168, 120, 0.45) !important;
   box-shadow:
     0 24px 52px rgba(0, 0, 0, 0.55),
-    0 0 0 1px rgba(0, 255, 85, 0.18),
-    0 0 44px rgba(0, 255, 85, 0.16) !important;
+    0 0 0 1px rgba(0, 168, 120, 0.18),
+    0 0 44px rgba(0, 168, 120, 0.16) !important;
 }
 
 .stat-box:hover,
 .trust-item:hover,
 .feature-item:hover {
   transform: translateY(-6px);
-  border-color: rgba(0, 255, 85, 0.4) !important;
+  border-color: rgba(0, 168, 120, 0.4) !important;
   box-shadow:
     0 16px 36px rgba(0, 0, 0, 0.45),
-    0 0 32px rgba(0, 255, 85, 0.12) !important;
+    0 0 32px rgba(0, 168, 120, 0.12) !important;
 }
 
 /* Primary button — stronger neon green glow */
 .btn-primary {
-  box-shadow: 0 0 0 rgba(0, 255, 85, 0);
+  box-shadow: 0 0 0 rgba(0, 168, 120, 0);
 }
 .btn-primary:hover {
   transform: translateY(-3px) scale(1.02);
   box-shadow:
-    0 0 32px rgba(0, 255, 85, 0.55),
-    0 0 64px rgba(0, 255, 85, 0.25),
+    0 0 32px rgba(0, 168, 120, 0.55),
+    0 0 64px rgba(0, 168, 120, 0.25),
     0 10px 28px rgba(0, 0, 0, 0.4) !important;
 }
 
@@ -2244,7 +2244,7 @@ iframe[title*="RIM STUDIO"] {
 
 /* Nav WhatsApp chip */
 .nav-wa:hover {
-  box-shadow: 0 0 24px rgba(0, 255, 85, 0.35) !important;
+  box-shadow: 0 0 24px rgba(0, 168, 120, 0.35) !important;
 }
 
 /* Floating WA */
@@ -2268,8 +2268,8 @@ iframe[title*="RIM STUDIO"] {
 .filter-bar button.active,
 .filter-pill:hover,
 .filter-pill.active {
-  box-shadow: 0 0 20px rgba(0, 255, 85, 0.2);
-  background: rgba(0, 255, 85, 0.1) !important;
+  box-shadow: 0 0 20px rgba(0, 168, 120, 0.2);
+  background: rgba(0, 168, 120, 0.1) !important;
 }
 
 /* Featured promo flyer section */
@@ -2278,7 +2278,7 @@ iframe[title*="RIM STUDIO"] {
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
   background:
-    radial-gradient(ellipse at 50% 0%, rgba(0,255,85,0.05), transparent 55%),
+    radial-gradient(ellipse at 50% 0%, rgba(0,168,120,0.05), transparent 55%),
     #060606;
 }
 .promo-frame {
@@ -2287,7 +2287,7 @@ iframe[title*="RIM STUDIO"] {
   border: 1px solid rgba(255,255,255,0.08);
   box-shadow:
     0 24px 60px rgba(0,0,0,0.55),
-    0 0 0 1px rgba(0,255,85,0.06);
+    0 0 0 1px rgba(0,168,120,0.06);
   background: #0a0a0a;
 }
 .promo-frame img {
@@ -2348,8 +2348,8 @@ a.product-card {
 .product-card--gallery:hover,
 a.product-card:hover {
   transform: translateY(-4px);
-  border-color: rgba(0, 255, 85, 0.35);
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45), 0 0 28px rgba(0, 255, 85, 0.1);
+  border-color: rgba(0, 168, 120, 0.35);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45), 0 0 28px rgba(0, 168, 120, 0.1);
 }
 .product-card--gallery .product-media,
 a.product-card .product-media {
