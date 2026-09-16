@@ -40,7 +40,7 @@ function headerHTML(activePage) {
     '</div></div>' +
     '<header class="site-header">' +
     '<div class="wrap">' +
-    '<a href="index.html" class="logo"><img src="images/logo.png?v=neon4" alt="RIM STUDIO Sandton – alloy wheels, mags and tyres Johannesburg" height="36" /></a>' +
+    '<a href="index.html" class="logo"><img src="images/logo.png?v=neon6" alt="RIM STUDIO Sandton – alloy wheels, mags and tyres Johannesburg" height="36" /></a>' +
     '<nav class="nav-desktop">' +
     '<a href="index.html" class="' + navClass("home") + '">HOME</a>' +
     '<a href="about.html" class="' + navClass("about") + '">ABOUT US</a>' +
@@ -82,7 +82,7 @@ function footerHTML() {
     '<div class="wrap">' +
     '<div class="footer-grid">' +
     "<div>" +
-    '<img src="images/logo.png?v=neon4" alt="RIM STUDIO" class="footer-logo" />' +
+    '<img src="images/logo.png?v=neon6" alt="RIM STUDIO" class="footer-logo" />' +
     "<p>Alloy wheels, mags, tyres, fitment, balancing, PPF & wraps in Sandton.<br/>Sandton’s destination for correct fitment and exceptional finish.</p>" +
     "</div>" +
     "<div>" +
