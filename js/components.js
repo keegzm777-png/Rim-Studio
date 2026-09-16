@@ -28,19 +28,19 @@ function headerHTML(activePage) {
     '<span class="announcement-item">Tyre fitment & wheel balancing</span>' +
     '<span class="announcement-item">Paint Protection Film (PPF)</span>' +
     '<span class="announcement-item">Vehicle detailing & training</span>' +
-    '<span class="announcement-item">Rivonia · Johannesburg</span>' +
+    '<span class="announcement-item">Edenburg · Sandton</span>' +
     '<span class="announcement-item">Performance tyres & racing sets</span>' +
     '<span class="announcement-item">Free quotations on all products</span>' +
     '<span class="announcement-item">Premium alloy wheels & mags</span>' +
     '<span class="announcement-item">Tyre fitment & wheel balancing</span>' +
     '<span class="announcement-item">Paint Protection Film (PPF)</span>' +
     '<span class="announcement-item">Vehicle detailing & training</span>' +
-    '<span class="announcement-item">Rivonia · Johannesburg</span>' +
+    '<span class="announcement-item">Edenburg · Sandton</span>' +
     '<span class="announcement-item">Performance tyres & racing sets</span>' +
     '</div></div>' +
     '<header class="site-header">' +
     '<div class="wrap">' +
-    '<a href="index.html" class="logo"><img src="images/logo.png?v=neon9" alt="RIM STUDIO Sandton – alloy wheels, mags and tyres Johannesburg" height="36" /></a>' +
+    '<a href="index.html" class="logo"><img src="images/logo.png?v=neon10" alt="RIM STUDIO Sandton – alloy wheels, mags and tyres Johannesburg" height="36" /></a>' +
     '<nav class="nav-desktop">' +
     '<a href="index.html" class="' + navClass("home") + '">HOME</a>' +
     '<a href="about.html" class="' + navClass("about") + '">ABOUT US</a>' +
@@ -82,12 +82,12 @@ function footerHTML() {
     '<div class="wrap">' +
     '<div class="footer-grid">' +
     "<div>" +
-    '<img src="images/logo.png?v=neon9" alt="RIM STUDIO" class="footer-logo" />' +
+    '<img src="images/logo.png?v=neon10" alt="RIM STUDIO" class="footer-logo" />' +
     "<p>Alloy wheels, mags, tyres, fitment, balancing, PPF & wraps in Sandton.<br/>Sandton’s destination for correct fitment and exceptional finish.</p>" +
     "</div>" +
     "<div>" +
     "<h4>Visit Us</h4>" +
-    "<address>33 7th Road<br/>Rivonia<br/>Johannesburg, Gauteng<br/>South Africa</address>" +
+    "<address>4 7th Ave<br/>Edenburg, Sandton, 2128<br/>South Africa</address>" +
     '<p style="margin-top:10px;"><a href="mailto:info@rimstudio.co.za" style="color:var(--cyan)">info@rimstudio.co.za</a></p>' +
     "</div>" +
     "<div>" +

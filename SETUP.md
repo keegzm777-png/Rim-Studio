@@ -23,6 +23,10 @@ Optional: you can switch the form action to Formspree later by replacing
 `https://formsubmit.co/info@rimstudio.co.za`  
 with your Formspree endpoint in `contact.html`.
 
+## Address
+- **4 7th Ave, Edenburg, Sandton, 2128**
+- Google Maps embed and schema updated to this address.
+
 ## Deploy to GitHub / hosting
 1. Unzip this package.
 2. Upload the **contents** of the `rim-studio` folder to your web root  
