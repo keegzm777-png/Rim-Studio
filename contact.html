@@ -28,13 +28,13 @@
 <meta name="twitter:description" content="Visit RIM STUDIO at 33 7th Road, Rivonia, Johannesburg, Gauteng, South Africa. Free quotations on wheels, mags, tyres, PPF, wraps, balancing and fitment. WhatsApp or email us." />
 <meta name="twitter:image" content="https://rimstudio.co.za/images/shop.jpg" />
 
-<link rel="icon" href="images/logo.png?v=neon8" type="image/png" />
-<link rel="apple-touch-icon" href="images/logo.png?v=neon8" />
+<link rel="icon" href="images/logo.png?v=neon9" type="image/png" />
+<link rel="apple-touch-icon" href="images/logo.png?v=neon9" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="css/style.css?v=neon8" />
+<link rel="stylesheet" href="css/style.css?v=neon9" />
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -48,7 +48,7 @@
   "image": "https://rimstudio.co.za/images/shop.jpg",
   "description": "Premium alloy wheels, mags, tyres, wheel balancing, tyre fitment, performance racing tyres, PPF, vehicle wraps, detailing, performance brake pads and coil overs in Sandton & Randburg, Johannesburg. Free quotations on all products and services.",
   "email": "info@rimstudio.co.za",
-  "telephone": "+27-00-000-0000",
+  "telephone": "+27-81-056-0116",
   "priceRange": "RRR",
   "currenciesAccepted": "ZAR",
   "paymentAccepted": "Cash, Credit Card, EFT",
@@ -171,13 +171,12 @@
       <div>
         <h3 class="h3" style="margin-bottom:20px;">Send us a message</h3>
 
-        <!--
-          Formspree-ready contact form.
-          Replace YOUR_FORM_ID below with a real Formspree endpoint
-          (https://formspree.io) configured to deliver to info@rimstudio.co.za,
-          or swap the action for your own /api/contact route.
-        -->
-        <form id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <form id="contactForm" action="https://formsubmit.co/info@rimstudio.co.za" method="POST">
+          <!-- formsubmit.co delivers messages to info@rimstudio.co.za -->
+          <input type="hidden" name="_subject" value="New enquiry from RIM STUDIO website" />
+          <input type="hidden" name="_template" value="table" />
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
           <div class="field">
             <label for="name">Full name</label>
             <input type="text" id="name" name="name" required />
@@ -208,7 +207,7 @@
           <h3 class="h3" style="margin-bottom:18px;">Showroom details</h3>
           <p class="body-muted" style="margin-bottom:8px;"><strong style="color:var(--text);">Address</strong><br/>33 7th Road<br/>Rivonia, Johannesburg, Gauteng<br/>South Africa</p>
           <p class="body-muted" style="margin:16px 0 8px;"><strong style="color:var(--text);">Email</strong><br/><a class="utility-link" href="mailto:info@rimstudio.co.za">info@rimstudio.co.za</a></p>
-          <p class="body-muted" style="margin:16px 0 8px;"><strong style="color:var(--text);">WhatsApp</strong><br/><a class="utility-link" href="#" id="waDetailLink">Chat with us</a></p>
+          <p class="body-muted" style="margin:16px 0 8px;"><strong style="color:var(--text);">WhatsApp / Phone</strong><br/><a class="utility-link" href="https://wa.me/27810560116" target="_blank" rel="noopener">081 056 0116</a></p>
           <a href="#" class="btn btn-whatsapp btn-block" id="ctaWhatsapp" style="margin-top:14px;">WhatsApp Us Now</a>
         </div>
 
@@ -242,15 +241,9 @@
 
     const form = document.getElementById("contactForm");
     const success = document.getElementById("formSuccess");
-    form.addEventListener("submit", (e) => {
-      // If a real Formspree ID (or API route) has been set, let the
-      // form submit normally. Otherwise, prevent the failed request
-      // and just show the success state so the flow can be demoed.
-      if (form.action.includes("YOUR_FORM_ID")) {
-        e.preventDefault();
-        success.classList.add("show");
-        form.reset();
-      }
+    form.addEventListener("submit", () => {
+      // formsubmit.co handles delivery to info@rimstudio.co.za
+      setTimeout(() => { success.classList.add("show"); }, 400);
     });
   });
 </script>
