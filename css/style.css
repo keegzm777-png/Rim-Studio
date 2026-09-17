@@ -2426,3 +2426,47 @@ a.product-card .badge {
   background-size: cover;
   background-position: center;
 }
+
+
+/* ---------- PROMO DUO (Bakkie + PPF 2-column full width) ---------- */
+.wrap-wide {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+@media (min-width: 768px) {
+  .wrap-wide { padding: 0 1.5rem; }
+}
+.promo-duo-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+@media (min-width: 900px) {
+  .promo-duo-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+}
+.promo-duo-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+.promo-duo-card .promo-frame {
+  flex: 1;
+  width: 100%;
+}
+.promo-duo-card .promo-frame img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  background: #050505;
+}
+.promo-duo .promo-actions {
+  margin-top: 1rem;
+}
+.promo-section.promo-duo {
+  border-bottom: 1px solid var(--border);
+}
